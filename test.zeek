@@ -1,4 +1,4 @@
-#@load base/frameworks/sumstats
+@load base/frameworks/sumstats
 event http_reply(c: connection, version: string, code: count, reason: string)
 {
 	SumStats::observe("response_all",[$host=c$id$orig_h],[$num=1]);
